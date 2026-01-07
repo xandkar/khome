@@ -1,7 +1,7 @@
 {
     "FSharp.useSdkScripts": true,
     "editor.fontFamily": "'Iosevka','Iosevka Fixed SS09 Extended', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "workbench.colorTheme": "Nord",
+    "workbench.colorTheme": "Zenburn",
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
     "workbench.startupEditor": "newUntitledFile",
     "todo-tree.tree.showScanModeButton": false,

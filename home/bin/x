@@ -4,7 +4,7 @@ set -e;
 
 README='README.md'
 
-name=$(echo "$@" | sed 's/\s\+/-/g');
+name=$(echo "$@" | sed -E 's/[[:space:]]+/-/g');
 timestamp=$(date +'%F--%H-%M-%S');
 directory="$HOME/x/$timestamp--$name";
 mkdir -p "$directory";

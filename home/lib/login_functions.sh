@@ -16,7 +16,7 @@ emoji() {
 }
 
 links() {
-    local -r file="$HOME"/arc/doc/links/"$(date +%F)"
+    local -r file="$DIR_ARCHIVE"/doc/links/"$(date +%F)"
 
     case "$1" in
         '') "$EDITOR" "$file";;
@@ -27,7 +27,7 @@ links() {
 links_aggregate_md() {
     printf 'Daily Links\n'
     printf '%s\n' "$(bar 78 '=')"
-    find ~/arc/doc/links -maxdepth 1 -mindepth 1 -type f \
+    find "$DIR_ARCHIVE"/doc/links -maxdepth 1 -mindepth 1 -type f \
     | sort -r \
     | while read -r file_path; do
         printf '\n'
@@ -339,7 +339,8 @@ hump() {
 ## search howtos
 ## howto : unit -> string
 howto() {
-    cat "$(find  ~/arc/doc/HOWTOs -mindepth 1 -maxdepth 1 | sort | fzf)"
+    local -r file=$(find  "$DIR_ARCHIVE"/doc/HOWTOs -mindepth 1 -maxdepth 1 | sort | fzf)
+    cat "$file"
 }
 
 _yt() {

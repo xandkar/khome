@@ -1,9 +1,26 @@
-#! /bin/sh
+#! /bin/bash
 
 set -e
 
+debug() {
+    local -r fmt=$1
+    local -a arg=("${@:2}")
+    local -r str=$(printf "$fmt" $arg)
+
+    printf '[debug] %s\n' "$str"
+}
+
+subject='screensaver launch'
 # XXX mate-settings-daemon, on which we rely on for hidpi settings, starts
 #     mate-screensaver and interferes with our start.
-pkill mate-screensave || true
+debug 'Starting killing loop'
+while ! pkill mate-screensave
+do
+    debug 'Failed to kill'
+    notify-send -u low "$subject" 'Failed to kill mate-screensaver'
+    sleep 1
+done
+debug 'Killed. Starting new.'
+notify-send -u low "$subject" 'Killed mate-screensaver. Starting xscreensaver'
 
 xscreensaver

@@ -113,11 +113,14 @@
 # ------------------------
 # Screenshot
 # ------------------------
-"scrot --freeze --select 'screen--%Y-%m-%d--%H-%M-%S.png' -e 'mv $f ~/arc/img/Screenshots/'"
+"scrot --freeze --select 'screen--%Y-%m-%d--%H-%M-%S.png' -e 'mv $f /mnt/arc/img/screenshots/'"
     Print
 
-"scrot          --select 'screen--%Y-%m-%d--%H-%M-%S.png' -e 'mv $f ~/arc/img/Screenshots/'"
+"scrot          --select 'screen--%Y-%m-%d--%H-%M-%S.png' -e 'mv $f /mnt/arc/img/screenshots/'"
     Shift + Print
+
+"scrot                   'screen--%Y-%m-%d--%H-%M-%S.png' -e 'mv $f /mnt/arc/img/screenshots/'"
+    Mod4 + Print
 
 # Screencast
 "st -c screencast -e ~/bin/screencast"
@@ -166,8 +169,6 @@
 "cd ~/doc/drafts && gvim $(draft ~/doc/drafts/adhoc)"
     Mod4 + d
 
-"cd ~/doc/notes/job-search-2024 && gvim README.md"
-    Mod4 + j
 "cd ~/doc/notes && notes_prepend && gvim -c NERDTreeFind notes.md"
     Mod4 + n + Shift
 "cd ~/doc/notes && gvim $(draft ~/doc/notes/adhoc)"
@@ -181,7 +182,7 @@
 
 
 # File browser
-"pcmanfm"
+"pcmanfm 2>> ~/var/log/pcmanfm.log"
     Mod4 + f
 
 # Weather

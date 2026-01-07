@@ -1,7 +1,7 @@
 [Added Associations]
 application/illustrator=gimp.desktop;
 application/octet-stream=gvim.desktop;
-application/pdf=zathura-pdf-poppler.desktop;mupdf.desktop;
+application/pdf=gvim.desktop;zathura-pdf-poppler.desktop;mupdf.desktop;
 application/x-extension-htm=chromium.desktop;userapp-Firefox-FY7R00.desktop;
 application/x-extension-html=chromium.desktop;userapp-Firefox-FY7R00.desktop;
 application/x-extension-shtml=chromium.desktop;userapp-Firefox-FY7R00.desktop;
@@ -12,7 +12,7 @@ audio/vnd.audible.aax=vlc.desktop;
 audio/x-m4a=vlc.desktop;mpv.desktop;
 image/bmp=sxiv.desktop;
 image/gif=sxiv.desktop;
-image/jpeg=sxiv.desktop;feh.desktop;
+image/jpeg=eom.desktop;sxiv.desktop;feh.desktop;
 image/png=sxiv.desktop;
 image/tiff=sxiv.desktop;
 inode/symlink=caja.desktop;
@@ -33,6 +33,8 @@ image/heif=eom.desktop;feh.desktop;
 application/xml=gvim.desktop;
 x-scheme-handler/tonsite=org.telegram.desktop.desktop;
 text/markdown=gvim.desktop;
+application/vnd.ms-htmlhelp=org.kde.okular.desktop;
+image/x-xcf=gimp.desktop;
 
 [Default Applications]
 application/illustrator=gimp.desktop
@@ -53,7 +55,7 @@ audio/x-vorbis+ogg=mpv.desktop
 audio/x-wav=mpv.desktop
 image/bmp=eom.desktop
 image/gif=eom.desktop
-image/jpeg=feh.desktop
+image/jpeg=eom.desktop
 image/png=eom.desktop
 image/tiff=eom.desktop
 inode/directory=pcmanfm.desktop
@@ -103,3 +105,4 @@ image/heif=feh.desktop
 application/xml=gvim.desktop
 x-scheme-handler/tonsite=org.telegram.desktop.desktop
 text/markdown=gvim.desktop
+image/x-xcf=gimp.desktop

@@ -2,16 +2,17 @@ export EDITOR=nvim
 export VISUAL=$EDITOR
 
 ### DIRs ###
-export DIR_GITHUB="${HOME}/arc/sw/src/repos/remote/github.com"
-export DIR_AUDIO="${HOME}/arc/aud"
-export DIR_VIDEO="${HOME}/arc/vid"
+export DIR_ARCHIVE="/mnt/arc"
+export DIR_GITHUB="${DIR_ARCHIVE}/sw/src/repos/remote/github.com"
+export DIR_AUDIO="${DIR_ARCHIVE}/aud"
+export DIR_VIDEO="${DIR_ARCHIVE}/vid"
 export DIR_YOUTUBE_VIDEO="${DIR_VIDEO}/web/youtube.com"
 export DIR_YOUTUBE_AUDIO="${DIR_AUDIO}/youtube.com"
 export DIR_NOTES="$HOME/doc/notes"
 export DIR_LOG="$HOME/var/log"
 export DIR_LOG_MPD="$DIR_LOG/mpd"
 export DIR_NQ="$HOME/var/run/nq"
-export DIR_WALLPAPERS="$HOME/arc/img/Wallpapers"
+export DIR_WALLPAPERS="${DIR_ARCHIVE}/img/Wallpapers"
 export DIR_TODO="$HOME/doc/TODO"
 
 # ensure all DIRs exist:
@@ -77,6 +78,12 @@ export PATH=/opt/DataGrip/bin:"$PATH"
 
 # JetBrains Toolbox
 export PATH="$PATH":"$HOME"/.local/share/JetBrains/Toolbox/scripts
+
+# Alloy
+export PATH=/opt/alloy/bin:"$PATH"
+
+# Windsurf
+export PATH=/opt/Windsurf/bin:"$PATH"
 
 # personal
 export PATH=$HOME/bin:$HOME/.local/bin:/snap/bin:/sbin:/usr/sbin:"$PATH"

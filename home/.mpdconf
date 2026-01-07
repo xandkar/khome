@@ -1,5 +1,5 @@
 #
-music_directory                    "~/arc/aud"
+music_directory                    "/mnt/arc/aud"
 playlist_directory                 "~/var/lib/mpd/playlists"
 db_file                            "~/var/lib/mpd/tag_cache"
 log_file                           "~/var/log/mpd/mpd.log"
